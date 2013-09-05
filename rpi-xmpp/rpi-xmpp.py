@@ -61,17 +61,16 @@ class Msg(sleekxmpp.ClientXMPP):
         self.disconnect(wait=True)
 
 def gpio_callback(gpio_id, val):
-    print("gpio %s: %s" % (gpio_id, val))
     msg = Msg(rc["recipient"], rc["message"])
     if not msg.connect():
-        slog.error("unable to connect")
+        slog.error("unable to send message")
         return
     msg.process(block=True)
     slog.info("message sent")
 
 def handle_gpio():
     RPIO.add_interrupt_callback(int(rc["gpio"]), gpio_callback, pull_up_down=RPIO.PUD_UP, edge="rising", debounce_timeout_ms=500, threaded_callback=True)
-    print("ready at gpio #%s" % rc["gpio"])
+    slog.info("ready at gpio #%s" % rc["gpio"])
     RPIO.wait_for_interrupts()
 
 if __name__ == "__main__":
