@@ -1,0 +1,5 @@
+JID=me@xmpp.server
+PASSWORD=password
+GPIO=14
+RECIPIENT=someone@xmpp.server
+MESSAGE=i have a dream
