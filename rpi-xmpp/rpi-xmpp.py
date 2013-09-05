@@ -57,7 +57,7 @@ class Msg(sleekxmpp.ClientXMPP):
     def session_start(self, event):
         self.send_presence()
         self.get_roster()
-        self.send_message(rc["recipient"], rc["message"])
+        self.send_message(self.rcpt, self.msg)
         self.disconnect(wait=True)
 
 def gpio_callback(gpio_id, val):
