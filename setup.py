@@ -4,7 +4,7 @@ setup(
     name = "rpi-xmpp",
     version="0.0.1",
     scripts = ['rpi-xmpp/rpi-xmpp.py'],
-    description = "Sending XMPP messages from RaspberryPi GPIO events",
+    description = "Send XMPP messages from RaspberryPi GPIO events",
     url = "https://github.com/diresi/rpi-xmpp",
     author = "Christoph Rissner",
     author_email = "diresi@gmx.net",
