@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = "rpi-xmpp",
-    version="0.0.1",
+    version="0.0.2",
     scripts = ['rpi-xmpp/rpi-xmpp.py'],
     description = "Send XMPP messages from RaspberryPi GPIO events",
     url = "https://github.com/diresi/rpi-xmpp",
