@@ -39,7 +39,7 @@ def read_config():
         for ln in open(rcfile).readlines():
             key, val = ln.strip().split('=', 1)
             rc[key.lower()] = val
-    
+
     opts = ["jid", "password", "gpio", "recipient", "message"]
     for opt in opts:
         if getattr(args, opt):
